@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .overley{
+            background-color: black;
+            opacity: 0.7;
+            width: 100vw;
+            height: 100vw;
+            z-index: 1;
+            position: relative;
+            transition-delay: 2s;
+        }
+
+        .overhidden{
+            display: none;
+        }
+    </style>
+    <!--tailwind css-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1 class="text-center font-bold text-2xl">Image Gallery</h1>
+    <div class="overley overhidden" id="backgroundOverley" ><p class="text-white absolute right-10 top-5 cursor-pointer font-bold" id="close">X</p></div>
+    <section class="grid grid-cols-3 justify-center items-center w-screen h-screen absolute gap-10 md:gap-0 p-5 top-0">
+
+        <img id="image1" class="flex justify-self-center" src="https://picsum.photos/seed/picsum/200/300" alt="">
+        <img id="image2" class="flex justify-self-center"  src="https://picsum.photos/id/237/200/300" alt="">
+        <img id="image3" class="flex justify-self-center"  src="https://picsum.photos/200/300?grayscale" alt="">
+    </section>
+    <script src="./task3.js"></script>
+</body>
+</html>
